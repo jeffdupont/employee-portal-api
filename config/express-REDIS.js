@@ -13,7 +13,7 @@ module.exports = function(app, config) {
 
   app.use(bodyParser());
   app.use(cookieParser());
-  app.use(session({ secret: "my secret phrase" }));
+  //app.use(session({ secret: "my secret phrase" }));
   app.use(session({ store: new RedisStore, secret: 'my secret password' }));
   app.use(passport.initialize());
   app.use(passport.session());

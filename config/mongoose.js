@@ -1,5 +1,14 @@
 var mongoose = require("mongoose"),
-    userModel = require("../models/user");
+    userModel = require("../models/user"),
+    clientModel = require("../models/client"),
+    eventModel = require("../models/event"),
+    timeslotModel = require("../models/timeslot"),
+    availabilityModel = require("../models/availability"),
+    notificationModel = require("../models/notification"),
+    memoModel = require("../models/memo");
+    Timeoffrequest = require("../models/timeoffrequest");
+    Ticketcount = require("../models/ticketcount");
+    Payroll = require("../models/payroll");
 
 
 module.exports = function(config) {

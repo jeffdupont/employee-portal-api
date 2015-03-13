@@ -35,7 +35,24 @@ var userSchema = mongoose.Schema({
     type: Boolean,
     default: false
   },
-  phone: String
+  phone: String,
+  password_change: {
+    type: Boolean,
+    default: true
+  },
+  created_by: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User'
+  },
+  created_date: Date,
+  date_of_birth: Date,
+  driver_license: String,
+  last_login: Date,
+  prof_image: String,
+  logged_in: {
+    type: Boolean,
+    default: false
+  }
 });
 userSchema.methods = {
   authenticate: function(password) {
